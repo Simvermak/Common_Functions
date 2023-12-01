@@ -19,5 +19,6 @@ def execute(sql, engine: Engine):
         result=conn.execute(text(sql))
         rows_affected = result.rowcount
         conn.commit()
+        print('执行语句', sql)
     return rows_affected
 
